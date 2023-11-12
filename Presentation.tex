@@ -82,6 +82,37 @@ over Moving Objects}
 \end{frame}
 
 %---------------------------------------------------------
+\section{Assignment of thresholds}
+\begin{frame}
+\frametitle{Assignment of thresholds}
+The threshold assignment routine takes as input the
+objects’ locations \(P = \{p1, p2, \ldots, pn\}\) and the k-means set
+\(\{m1, m2, \ldots, mk\}\), and outputs a set of \(n\) real values \(\{\theta1, \theta2, \ldots, \thetan\}\), i.e., the thresholds.
+\begin{itemize}
+    \item It can be derived that \[ \theta_p \leq \min_{m \in M \setminus \{m_p\}} \text{dist}(p, m) - \triangle \], where $\triangle$ represents the maximum permissible error.
+    \vspace{5mm}
+    \item  Based on the following observation we can develop an algorithm as given below for calculating the thresholds or maximum distance each object can move without sending a signal to the server in its neighbourhood
+\end{itemize}
+
+
+\end{frame}
+
+
+\section{Algorithm for calculating thresholds}
+\begin{frame}
+\frametitle{Algorithm for calculating thresholds}
+
+
+    \begin{center}
+        \includegraphics[width=\textwidth]{algo.png} % Replace with the actual file name
+        
+    \end{center}
+\end{frame}
+
+
+
+
+%---------------------------------------------------------
 \section{Experimental Evaluation}
 \begin{frame}
 \frametitle{Comparision of CPU Time}
