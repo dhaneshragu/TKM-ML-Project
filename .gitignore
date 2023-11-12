@@ -177,6 +177,10 @@ cython_debug/
 *.bak
 *.swp
 *~
+*.snm
+*.nav
+*.fdb_latexmk
+*.fls
 
 # Auto-generated files and directories
 /_minted-*/
