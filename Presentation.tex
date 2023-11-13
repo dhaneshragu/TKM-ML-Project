@@ -109,7 +109,31 @@ objects locations \(P = \{p1, p2, \ldots, pn\}\) and the k-means set
 \end{frame}
 %------------------------------------------------------------
 
+%---------------------------------------------------------
+\section{Utilizing Object Speed and Dissemination of Thresholds}
+\begin{frame}
+\frametitle{Utilizing Object Speed and Dissemination of Thresholds}
+\item Assume the system knows roughly the average speed $s_{i}$ of each object $p_{i}$, then the objective function becomes   $(\sum\limits_{i=1}^n s_i/\theta_i) $. 
+\item Using the Lagrange multiplier method, we obtain the optimal solution :
+\item \forall {i}, \theta_i = $({n}\triangle_{1} \sqrt{s_{i}})/\sum\limits_{j=1}^n \sqrt{s_{j}}$ .
+\item  Dissemination of Thresholds can be carried out depending on the computational capabilities of the objects. We propose two approaches:
+\begin{itemize}
+    \item The first is
+based on broadcasting. Initially, the
+server broadcasts $\triangle$. Then each object
+computes its own threshold based on the broadcast
+information.
+    % \vspace{5mm}
+    \item The second approach assumes that objects have limited
+computational capabilities. Initially, the server sends $\triangle_{1}$ to
+all objects through single-cast messages. In subsequent
+updates, it sends the threshold to an object only when it has
+changed.
+\end{itemize}
 
+
+\end{frame}
+%------------------------------------------------------------
 
 
 %---------------------------------------------------------
