@@ -22,7 +22,7 @@ over Moving Objects}
 \date[16th November 2023] % (optional)
 {\textbf{DA321M Course Project, July-Nov 2023}}
 
-\logo{\includegraphics[height=1cm]{iitg-logo.jpeg}}
+\logo{\includegraphics[height=0.6cm]{iitg-logo.jpeg}}
 
 %End of title page configuration block
 %------------------------------------------------------------
@@ -183,6 +183,28 @@ over Moving Objects}
     \begin{itemize}
       \vspace{-0.2cm}
       \item \small This graph shows \texttt{TKM} performs much better in most of the cases.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Comparision of Total Messages sent}
+
+  \begin{columns}
+
+    \column{0.35\textwidth}
+    \begin{itemize}
+      \item This graph shows the comparison of messages sent to the server for \texttt{REF} (Normal K-means algorithm) v/s \texttt{TKM} (Threshold-based K-Means algorithm)
+      \item At each iteration, some new points were added and, with a probability, the previous points were displaced by a small amount.
+
+
+    \end{itemize}
+
+    \column{0.65\textwidth}
+    \includegraphics[width=1\textwidth]{msg.png}
+    \begin{itemize}
+      \vspace{-0.2cm}
+      \item \small This graph shows \texttt{TKM} sends less messages to the server, ensuring faster downtime for the same results.
     \end{itemize}
   \end{columns}
 \end{frame}
