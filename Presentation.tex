@@ -60,6 +60,33 @@ over Moving Objects}
 
 
 %---------------------------------------------------------
+\section{Introduction}
+\begin{frame}
+  \frametitle{Introduction}
+
+  \vspace{-1mm}
+  Notations used in legacy KNN algorithms :-
+  \begin{itemize}
+      \item Given a data set \(P = \{p_1, p_2, \ldots, p_n\}\) of 2D points.
+      \item The K-means query returns center set  \(M = \{m_1, m_2, \ldots, m_k\}\)
+      \item \(cost(M) = \left( \sum_{i=1}^{n} dist^2(p_i, NN(p_i, M)) \right)\) for \(i\) from 1,2,\ldots,\(n\)
+      \item \(NN(p_i, M)\) is the nearest neighbor of \(p_i\) in \(M\).
+      % \item \(\theta_i\) is threshold of object \(p_i\). The object issues an update only when its current location deviates by \(\theta_i.\)
+  \end{itemize}
+  \vspace{2mm}
+
+  ZDT-Algorithm :-
+  \begin{itemize}
+      \item Let \(M\) be the current center set in HC algorithm such that no center can deviate from its position in \(M\) by more than \(\delta\).
+      \item HC will converge \(M\) to \(M\)* where \(cost(M^*) \geq cost(M)-n\delta^2 \)
+      % \item Zhang et al.[1] provide a method to compute \(\delta\) in \(O(nlogn)\) time 
+      \item If this bound exceeds the best cost achieved by a previous local optimum (with a different seed set), subsequent iterations of HC can be pruned
+  \end{itemize}
+\end{frame}
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
 \section{HC* Algorithm}
 \begin{frame}
   \frametitle{HC* Algorithm}
