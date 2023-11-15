@@ -67,12 +67,17 @@ over Moving Objects}
   \vspace{-1mm}
   Notations used in legacy KNN algorithms :-
   \begin{itemize}
-      \item Given a data set \(P = \{p_1, p_2, \ldots, p_n\}\) of 2D points.
-      \item The K-means query returns center set  \(M = \{m_1, m_2, \ldots, m_k\}\)
+      \item Data set \(P=\{p_1, \ldots, p_n\}\). Query returns centers \(M=\{m_1, \ldots, m_k\}\).
       \item \(cost(M) = \left( \sum_{i=1}^{n} dist^2(p_i, NN(p_i, M)) \right)\) for \(i\) from 1,2,\ldots,\(n\)
-      \item \(NN(p_i, M)\) is the nearest neighbor of \(p_i\) in \(M\).
+      % \item \(NN(p_i, M)\) is the nearest neighbor of \(p_i\) in \(M\).
       % \item \(\theta_i\) is threshold of object \(p_i\). The object issues an update only when its current location deviates by \(\theta_i.\)
   \end{itemize}
+  \vspace{2mm}
+
+    \textbf{Reference Solution:} Whenever an object moves, it sends a location update. \\
+
+    \textbf{Threshold based:} Issues an update only if its current location deviates from the previous one by at least $\delta_i$.
+
   \vspace{2mm}
 
   ZDT-Algorithm :-
